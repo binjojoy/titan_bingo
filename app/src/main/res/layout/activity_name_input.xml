@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/retro_bg_pink"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WHO ARE YOU?"
+        android:fontFamily="@font/pixelify_sans_medium"
+        android:textSize="32sp"
+        android:textColor="#FF69B4"
+        android:shadowColor="@color/pixel_black"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="1"
+        app:layout_constraintBottom_toTopOf="@id/etUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_pixel_input"
+        android:fontFamily="@font/pixelify_sans_medium"
+        android:hint="ENTER NAME..."
+        android:textColorHint="#999999"
+        android:textColor="@color/pixel_black"
+        android:textSize="20sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:maxLength="12"
+        app:layout_constraintBottom_toTopOf="@id/btnContinue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrompt"
+        android:layout_marginBottom="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_pixel_button"
+        android:text="CONTINUE >"
+        android:fontFamily="@font/pixelify_sans_medium"
+        android:textSize="20sp"
+        android:textColor="@color/pixel_black"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUsername"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
